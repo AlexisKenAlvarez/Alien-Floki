@@ -13,6 +13,10 @@ module.exports = {
       colors: {
         'mygrey': '#cdcdcd',
         'heroblue': '#739FA0'
+      },
+      backgroundImage: {
+        token: "url('/tokenomics.webp')",
+        footer: "url('/footer.webp')"
       }
     },
   },

@@ -8,14 +8,14 @@ const Hero = ({ next }) => {
     const [onHover, setHover] = useState(false)
 
     return (
-        <motion.main initial={{ skew: "15deg, 15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='min-w-full h-full bg-black lg:p-10 p-7 text-white flex overflow-hidden lg:items-end items-start'>
-            <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='w-full h-auto flex justify-between items-center z-10 absolute top-0 left-0 lg:p-10 p-7'>
-                <div className='flex items-center gap-x-4'>
+        <motion.main initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='min-w-full h-full bg-black lg:p-10 p-7 text-white flex overflow-hidden lg:items-end items-start'>
+            <nav  className='w-full h-auto flex justify-between items-center z-10 absolute top-0 left-0 lg:p-10 p-7'>
+                <motion.div initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex items-center gap-x-4'>
                     <img src="/logo.webp" alt="Logo" className='w-[3rem]'></img>
                     <h3 className='font-orbit lg:text-2xl'>AlienFloki</h3>
-                </div>
-                <p className='font-orbit lg:text-lg md:text-sm text-xs'>Lorem ipsum</p>
-            </motion.nav>
+                </motion.div>
+                <motion.p initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit lg:text-lg md:text-sm text-xs'>Lorem ipsum</motion.p>
+            </nav>
             <div className='absolute top-0 left-0 w-full h-full bg-[rgba(15,15,15,0.80)] z-[9]'></div>
 
             <video src={videoBg} autoPlay loop muted className='w-full object-cover h-full z-0 absolute top-0 left-0' ></video>
@@ -35,19 +35,19 @@ const Hero = ({ next }) => {
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} exit={{ scale: 0 }} alt="inner" src="/circinner.webp" className='sm:block hidden z-10 absolute bottom-0 right-0 md:w-[45vh] w-[40vh]  transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "47vh" } : {}}></motion.img>
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5, delay: 0.050 }} exit={{ scale: 0 }} alt="inner" src="/circouter.webp" className='sm:block hidden z-10 absolute bottom-0 right-0 md:w-[80vh] w-[70vh] transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "90vh" } : {}}></motion.img>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='select-none absolute z-10 right-10 bottom-9 group'>
+            <div className='select-none absolute z-10 right-10 bottom-9'>
                 <div className='flex items-center gap-x-6 cursor-pointer'>
-                    <p className='font-orbit md:text-md text-sm group-hover:tracking-widest transition-all ease-in-out duration-300'>About us</p>
-                    <div className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white hover:scale-[1.1] trasition-all ease-in-out duration-300' onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }} onClick={next}>
+                    <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>About us</motion.p>
+                    <motion.div initial={{ opacity: 0, y: 150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white hover:scale-[1.1] ' onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }} onClick={next}>
                         <SlArrowDown className='md:text-sm text-xs' />
-                    </div>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='select-none absolute right-11 my-auto md:top-[-4rem] top-0 bottom-0 z-10 h-fit items-center gap-x-2 sm:flex hidden'>
-                <h1 className='font-gruppo text-lg'>01</h1>
-                <div className='w-14 h-[1px] bg-white'></div>
-            </motion.div>
+            <div className='select-none absolute right-11 my-auto md:top-[-4rem] top-0 bottom-0 z-10 h-fit items-center gap-x-2 sm:flex hidden'>
+                <motion.h1 initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-gruppo text-lg'>01</motion.h1>
+                <motion.div initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.5, ease: [.21, 1.03, .27, 1] }} className='w-14 h-[1px] bg-white'></motion.div>
+            </div>
 
 
         </motion.main>

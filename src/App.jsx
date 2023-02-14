@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
 import { AnimatePresence } from 'framer-motion'
+import Tokenomics from './components/Tokenomics'
 
 const App = () => {
 
@@ -23,6 +24,10 @@ const App = () => {
         {
             num: 2,
             comp: <About key="ABOUT" prev={handlePrev} next={handleNext} />
+        },
+        {
+            num: 3,
+            comp: <Tokenomics key="TOKEN" prev={handlePrev} next={handleNext} />
         }
     ]
 
