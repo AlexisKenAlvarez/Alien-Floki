@@ -11,6 +11,10 @@ const App = () => {
         setPage(curr => curr + 1)
     }
 
+    const handlePrev = () => {
+        setPage(curr => curr - 1)
+    }
+
     const pageList = [
         {
             num: 1,
@@ -18,7 +22,7 @@ const App = () => {
         },
         {
             num: 2,
-            comp: <About key="ABOUT" />
+            comp: <About key="ABOUT" prev={handlePrev} next={handleNext} />
         }
     ]
 
@@ -26,7 +30,7 @@ const App = () => {
         <section className='w-full h-screen overflow-hidden'>
             <div className='w-full h-full'>
 
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                     {pageList.map((items, i) => {
                         return (
                             items.num === page ? items.comp : null

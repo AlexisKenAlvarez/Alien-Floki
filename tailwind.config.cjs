@@ -11,7 +11,8 @@ module.exports = {
         'gruppo': ['Gruppo']
       },
       colors: {
-        'mygrey': '#cdcdcd'
+        'mygrey': '#cdcdcd',
+        'heroblue': '#739FA0'
       }
     },
   },
