@@ -1,18 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { SlArrowDown } from "react-icons/sl";
+import Nav from '../utils/Nav';
+import Next from '../utils/Next';
+import Previous from '../utils/Previous';
+import MiddleNum from '../utils/MiddleNum';
 
 
 const About = ({ prev, next }) => {
     return (
         <motion.section initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='w-full h-screen bg-[#020102] text-white flex flex-col items-start md:justify-between py-10'>
 
-            <nav  className='w-full h-auto flex justify-between items-center z-10 absolute top-0 left-0 lg:p-10 p-7'>
-                <motion.div initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex items-center gap-x-4'>
-                    <img src="/logo.webp" alt="Logo" className='w-[3rem]'></img>
-                    <h3 className='font-orbit lg:text-2xl'>AlienFloki</h3>
-                </motion.div>
-            </nav>
+            <Nav />
 
             <img alt="Alien" src="/about.webp" className='absolute z-[9] right-0 bottom-0 md:w-[85vh] h-[45vh] md:h-auto '></img>
 
@@ -27,29 +26,9 @@ const About = ({ prev, next }) => {
                 <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className='font-orbit ml-3 mt-20 md:text-sm text-xs'>CONTACT US AT <span className="text-heroblue">ALIENFLOKI@GMAIL.COM</span></motion.p>
             </div>
 
-            <div className='select-none absolute z-10 right-10 bottom-9'>
-                <div className='flex items-center gap-x-6 cursor-pointer' onClick={next}>
-                    <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>Tokenomics</motion.p>
-                    <motion.div initial={{ opacity: 0, y: 150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white'>
-                        <SlArrowDown className='md:text-sm text-xs' />
-                    </motion.div>
-                </div>
-            </div>
-
-            <div className='select-none absolute right-11 my-auto md:top-[-4rem] top-0 bottom-0 z-10 h-fit items-center gap-x-2 sm:flex hidden'>
-                <motion.h1 initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-gruppo text-lg'>02</motion.h1>
-                <motion.div initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.5, ease: [.21, 1.03, .27, 1] }} className='w-14 h-[1px] bg-white'></motion.div>
-            </div>
-
-            <div className='select-none absolute z-10 right-10 top-9'>
-                <div className='flex items-center gap-x-6 cursor-pointer'>
-                    <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>Home</motion.p>
-                    <motion.div initial={{ opacity: 0, y: -150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white' onClick={prev}>
-                        <SlArrowDown className='md:text-sm text-xs rotate-180' />
-                    </motion.div>
-                </div>
-            </div>
-
+            <Next text="Tokenomics" next={next} />
+            <MiddleNum num="02" />
+            <Previous text="Home" prev={prev} />
 
         </motion.section>
     )

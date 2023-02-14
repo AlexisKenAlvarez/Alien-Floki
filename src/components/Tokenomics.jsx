@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { SlArrowDown } from "react-icons/sl"
 import { HiClipboard } from 'react-icons/hi'
-import { BiClipboard } from 'react-icons/bi'
+import Previous from '../utils/Previous'
+import MiddleNum from '../utils/MiddleNum'
+import Next from '../utils/Next'
 
 const Tokenomics = ({ next, prev }) => {
     const [contactAddress, setContact] = useState('0x0000000000000000')
@@ -28,28 +29,10 @@ const Tokenomics = ({ next, prev }) => {
                 </motion.div>
             </nav>
 
-            <div className='select-none absolute z-10 right-10 bottom-9'>
-                <div className='flex items-center gap-x-6 cursor-pointer' onClick={next}>
-                    <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>Roadmap</motion.p>
-                    <motion.div initial={{ opacity: 0, y: 150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white'>
-                        <SlArrowDown className='md:text-sm text-xs' />
-                    </motion.div>
-                </div>
-            </div>
 
-            <div className='select-none absolute right-11 my-auto md:top-[-4rem] top-0 bottom-0 z-10 h-fit items-center gap-x-2 sm:flex hidden'>
-                <motion.h1 initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-gruppo text-lg'>03</motion.h1>
-                <motion.div initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.5, ease: [.21, 1.03, .27, 1] }} className='w-14 h-[1px] bg-white'></motion.div>
-            </div>
-
-            <div className='select-none absolute z-10 right-10 top-9'>
-                <div className='flex items-center gap-x-6 cursor-pointer'>
-                    <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>About us</motion.p>
-                    <motion.div initial={{ opacity: 0, y: -150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white' onClick={prev}>
-                        <SlArrowDown className='md:text-sm text-xs rotate-180' />
-                    </motion.div>
-                </div>
-            </div>
+            <MiddleNum num="03" />
+            <Previous text="About us" prev={prev} />
+            <Next text="Roadmap" next={next} />
 
 
             <div className='relative h-auto w-fit px-0 z-10'>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import videoBg from '../assets/herovideo.mp4'
 import { SlArrowDown } from "react-icons/sl";
 import { motion } from 'framer-motion';
+import MiddleNum from '../utils/MiddleNum';
 
 const Hero = ({ next }) => {
 
@@ -35,7 +36,7 @@ const Hero = ({ next }) => {
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} exit={{ scale: 0 }} alt="inner" src="/circinner.webp" className='sm:block hidden z-10 absolute bottom-0 right-0 md:w-[45vh] w-[40vh]  transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "47vh" } : {}}></motion.img>
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5, delay: 0.050 }} exit={{ scale: 0 }} alt="inner" src="/circouter.webp" className='sm:block hidden z-10 absolute bottom-0 right-0 md:w-[80vh] w-[70vh] transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "90vh" } : {}}></motion.img>
 
-            <div className='select-none absolute z-10 right-10 bottom-9'>
+            <div className='select-none absolute z-10 right-10 bottom-9 noblue'>
                 <div className='flex items-center gap-x-6 cursor-pointer'>
                     <motion.p initial={{ opacity: 0, x: -150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-md text-sm'>About us</motion.p>
                     <motion.div initial={{ opacity: 0, y: 150 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='flex h-auto w-fit md:p-5 p-3 rounded-full border-[1px] border-white hover:scale-[1.1] ' onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }} onClick={next}>
@@ -44,10 +45,7 @@ const Hero = ({ next }) => {
                 </div>
             </div>
 
-            <div className='select-none absolute right-11 my-auto md:top-[-4rem] top-0 bottom-0 z-10 h-fit items-center gap-x-2 sm:flex hidden'>
-                <motion.h1 initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-gruppo text-lg'>01</motion.h1>
-                <motion.div initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.5, ease: [.21, 1.03, .27, 1] }} className='w-14 h-[1px] bg-white'></motion.div>
-            </div>
+            <MiddleNum num="01"/>
 
 
         </motion.main>
