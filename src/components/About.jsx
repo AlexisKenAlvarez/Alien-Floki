@@ -19,11 +19,11 @@ const About = ({ prev, next }) => {
 
             <div className='relative h-auto w-fit md:px-10 pb-20 px-5 z-10'>
                 <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-3xl ml-[5px]' data-text="MY ORIGIN">MY ORIGIN</motion.h1>
-                <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className='font-orbit ml-3 text-heroblue font-semibold'>ABOUT ALIENFLOKI</motion.h1>
+                <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className='font-orbit ml-3 text-heroblue font-semibold'>ABOUT FLOKI INVASION</motion.h1>
 
                 <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }} className='font-gruppo max-w-[40rem] md:text-xl text-md mt-3 leading-6 text-mygrey ml-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</motion.p>
 
-                <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className='font-orbit ml-3 mt-20 md:text-sm text-xs'>CONTACT US AT <span className="text-heroblue">ALIENFLOKI@GMAIL.COM</span></motion.p>
+                <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className='font-orbit ml-3 mt-20 md:text-sm text-xs'>CONTACT US AT <span className="text-heroblue">FLOKINVASION@GMAIL.COM</span></motion.p>
             </div>
 
             <Next text="Tokenomics" next={next} />
