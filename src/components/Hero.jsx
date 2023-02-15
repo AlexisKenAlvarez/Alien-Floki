@@ -24,7 +24,7 @@ const Hero = ({ next }) => {
 
             <div className='relative z-10'>
                 <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-3xl' data-text="INVASION IS UPON US">INVASION IS UPON US</motion.h1>
-                <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='ml-3 w-[40vh] mt-2 relative'>
+                <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='ml-3 w-[40vh] 2xl:w-[50vh] mt-2 relative'>
 
                     <video autoPlay>
                         <source src={another} type="video/mp4" />
@@ -33,7 +33,7 @@ const Hero = ({ next }) => {
 
 
                 </motion.div>
-                <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className='font-gruppo max-w-[45rem] md:text-[16px] text-sm mt-3 leading-6 text-mygrey ml-3'>A number of unidentified aerial phenomenas have been spotted over multiple countries recently.The official NORAD statement is as follows: Military aircraft are currently operating from Alaska and Canada is support of north American aerospace defence command 	&#40;NORAR&#41; activities. NORAD confirms that we have positively identified a high - altitude airborne object over northern Canada. While we cannot discuss specifics related to these activities at this time, please note that early reports indicate that this U.F.O is what is commonly referred to a FLOKI INU bringing wealth and prosperity to earth.</motion.p>
+                <motion.p initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className='font-gruppo max-w-[45rem] 2xl:max-w-[55rem] md:text-[16px] text-sm mt-3 leading-6 text-mygrey ml-3 2xl:text-lg'>A number of unidentified aerial phenomenas have been spotted over multiple countries recently.The official NORAD statement is as follows: Military aircraft are currently operating from Alaska and Canada is support of north American aerospace defence command 	&#40;NORAR&#41; activities. NORAD confirms that we have positively identified a high - altitude airborne object over northern Canada. While we cannot discuss specifics related to these activities at this time, please note that early reports indicate that this U.F.O is what is commonly referred to a FLOKI INU bringing wealth and prosperity to earth.</motion.p>
 
                 <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }} className='mt-9 flex items-center gap-x-9 font-gruppo ml-3'>
                     <div className='border-[1px] border-white w-fit h-auto cursor-pointer px-8 py-2 hover:text-black hover:font-bold hover:bg-white transition-all ease-in-out duration-300 min-w-[8.8rem] max-h-[2.6em]'>

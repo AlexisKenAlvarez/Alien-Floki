@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { SlArrowDown } from "react-icons/sl";
 import Nav from '../utils/Nav';
@@ -8,11 +8,17 @@ import MiddleNum from '../utils/MiddleNum';
 
 
 const About = ({ prev, next, home }) => {
+
+    const body = document.querySelector('#root');
+
+    body.scrollIntoView({
+        behavior: 'smooth'
+    }, 500)
+
     return (
-        <motion.section initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='w-full h-screen bg-[#020102] text-white flex flex-col items-start md:justify-between py-10 overflow-hidden'>
+        <motion.section initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='w-full h-auto min-h-screen bg-[#020102] text-white flex flex-col items-start md:justify-between py-10 overflow-hidden pb-10'>
 
             <Nav click={home} />
-
             <img alt="Alien" src="/about.webp" className='absolute z-[9] right-0 bottom-0 md:w-[85vh] h-[45vh] md:h-auto '></img>
 
             <motion.h1 initial={{ opacity: "0%" }} animate={{ x: [-200, 0], opacity: "10%" }} transition={{ duration: 1, delay: 0.1 }} className='md:px-11 px-6 md:mt-32 mt-20 md:text-8xl text-6xl font-orbit font-bold text-white pb-10 md:pb-0 z-10'>ABOUT</motion.h1>

@@ -36,14 +36,26 @@ const Tokenomics = ({ next, prev, home }) => {
                 <div className='ml-3'>
                     <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className='font-orbit text-heroblue font-semibold'>TRANSACTION TAX</motion.h1>
 
-                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }} >
-                        <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px] mt-10'>FOR BUYING</h1>
-                        <h1 className='font-orbit text-4xl font-bold ml-[5px] text-heroblue'>5%</h1>
+                    <div className="flex items-center mt-10 gap-x-6">
+                        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}>
+                            <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px]'>FOR BUYING</h1>
+                            <h1 className='font-orbit text-4xl font-bold ml-[5px] text-heroblue'>5%</h1>
+                        </motion.div>
+
+                        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}>
+                            <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px]'>FOR SELLING</h1>
+                            <h1 className='font-orbit text-4xl font-bold ml-[5px] text-heroblue'>5%</h1>
+                        </motion.div>
+                    </div>
+
+                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className='mt-7'>
+                        <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px]'>Reserved for vaporization</h1>
+                        <h1 className='font-orbit text-4xl font-bold ml-[5px] text-heroblue'>15% - 20%</h1>
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className='mt-7'>
-                        <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px]'>FOR SELLING</h1>
-                        <h1 className='font-orbit text-4xl font-bold ml-[5px] text-heroblue'>5%</h1>
+                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className='mt-7'>
+                        <h1 className='font-orbit md:text-2xl font-semibold sm:text-xl ml-[5px]'>Current Supply:</h1>
+                        <h1 className='font-orbit sm:text-xl text-sm font-bold ml-[5px] text-heroblue mt-2'>1,000,000,000,000</h1>
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className='mt-7'>

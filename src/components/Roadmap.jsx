@@ -44,13 +44,24 @@ const Roadmap = ({ prev, home }) => {
             <div className='relative h-auto w-fit md:pb-20 z-10'>
                 <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-2xl' data-text="OUR STEPS">OUR STEPS</motion.h1>
 
-                <div className='ml-2 md:mt-9 md:max-w-[40rem] sm:max-w-[20rem] max-w-[15rem]'>
+                <div className='ml-2 md:mt-9 lg:max-w-[30rem] max-w-[18rem] md:max-w-[20rem] 2xl:max-w-[35rem]'>
                     <Slider {...settings} className="w-full">
-                        <Phase phase="Phase 1" />
-                        <Phase phase="Phase 2" />
-                        <Phase phase="Phase 3" />
-                        <Phase phase="Phase 4" />
-                        <Phase phase="Phase 5" />
+                        <Phase phase="Phase 1" desc={<>-Floki Invasion<br /> -Branding Created
+                            -Website & Whitepaper Live<br />
+                            -Stealth Launch<br />
+                            -Social Channels Live<br />
+                            -Community Growth and Competitions<br />
+                            -Vaporize Bot Active</>} />
+
+                        <Phase phase="Phase 2" desc={<>-Social Media Marketing<br />
+                            -Influencer Partnerships & AMAs<br />
+                            -Token Listing Websites</>} />
+
+                        <Phase phase="Phase 3" desc={<>-Tier 2 CEX Listings and Tracking<br />
+                            -Portfolio Tacker Live<br />
+                            -Paid Media Campaigns<br />
+                            -Roadmap Update</>} />
+
                     </Slider>
                 </div>
             </div>
