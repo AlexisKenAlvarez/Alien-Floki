@@ -26,7 +26,7 @@ const Hero = ({ next }) => {
                 <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-3xl' data-text="INVASION IS UPON US">INVASION IS UPON US</motion.h1>
                 <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='ml-3 w-[40vh] 2xl:w-[50vh] mt-2 relative'>
 
-                    <video autoPlay>
+                    <video autoPlay loop controls controlsList="nofullscreen nodownload">
                         <source src={another} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
