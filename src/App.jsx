@@ -37,7 +37,7 @@ const App = () => {
     ]
 
     return (
-        <section className='w-full h-screen overflow-hidden'>
+        <section className='w-full h-screen overflow-x-hidden overflow-y-scroll noscroll'>
             <div className='w-full h-full'>
 
                 <AnimatePresence mode="wait">
