@@ -22,7 +22,7 @@ const Hero = ({ next }) => {
             <video src={videoBg} autoPlay loop muted className='w-full object-cover h-full z-0 absolute top-0 left-0' ></video>
 
             <div className='relative z-10'>
-                <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-3xl' data-text="INVASION IS UPON US">INVASION IS UPON US</motion.h1>
+                <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-3xl ml-[5px]' data-text="INVASION IS UPON US">INVASION IS UPON US</motion.h1>
                 <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='ml-3 w-[40vh] 2xl:w-[50vh] mt-2 relative'>
 
                     <video autoPlay loop controls controlsList="nofullscreen nodownload">
