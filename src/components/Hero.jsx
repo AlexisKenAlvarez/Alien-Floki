@@ -16,7 +16,6 @@ const Hero = ({ next }) => {
                     <img src="/logo.webp" alt="Logo" className='w-[3rem]'></img>
                     <h3 className='font-orbit '>Floki Invasion</h3>
                 </motion.div>
-                <motion.p initial={{ opacity: 0, x: 150 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1.5, delay: 0.4, ease: [.21, 1.03, .27, 1] }} className='font-orbit md:text-sm text-xs'>Lorem ipsum</motion.p>
             </nav>
             <div className='absolute top-0 left-0 w-full h-full bg-[rgba(15,15,15,0.80)] z-[9]'></div>
 
