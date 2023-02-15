@@ -7,11 +7,11 @@ import Previous from '../utils/Previous';
 import MiddleNum from '../utils/MiddleNum';
 
 
-const About = ({ prev, next }) => {
+const About = ({ prev, next, home }) => {
     return (
-        <motion.section initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='w-full h-screen bg-[#020102] text-white flex flex-col items-start md:justify-between py-10'>
+        <motion.section initial={{ skew: "-15deg, -15deg" }} animate={{ skew: "0deg, 0deg" }} exit={{ opacity: 0, skew: "-15deg, -15deg" }} transition={{ duration: 0.5 }} className='w-full h-screen bg-[#020102] text-white flex flex-col items-start md:justify-between py-10 overflow-hidden'>
 
-            <Nav />
+            <Nav click={home} />
 
             <img alt="Alien" src="/about.webp" className='absolute z-[9] right-0 bottom-0 md:w-[85vh] h-[45vh] md:h-auto '></img>
 

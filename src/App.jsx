@@ -17,6 +17,10 @@ const App = () => {
         setPage(curr => curr - 1)
     }
 
+    const home = () => {
+        setPage(1)
+    }
+
     const pageList = [
         {
             num: 1,
@@ -24,15 +28,15 @@ const App = () => {
         },
         {
             num: 2,
-            comp: <About key="ABOUT" prev={handlePrev} next={handleNext} />
+            comp: <About key="ABOUT" prev={handlePrev} next={handleNext} home={home} />
         },
         {
             num: 3,
-            comp: <Tokenomics key="TOKEN" prev={handlePrev} next={handleNext} />
+            comp: <Tokenomics key="TOKEN" prev={handlePrev} next={handleNext} home={home} />
         },
         {
             num: 4,
-            comp: <Roadmap key="Roadmap" prev={handlePrev} next={handleNext} />
+            comp: <Roadmap key="Roadmap" prev={handlePrev} next={handleNext} home={home} />
         }
     ]
 
