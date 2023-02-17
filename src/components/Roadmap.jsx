@@ -39,7 +39,7 @@ const Roadmap = ({ prev, home }) => {
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} exit={{ scale: 0 }} alt="inner" src="/roadinner.webp" className='sm:block hidden z-[9] absolute top-0 right-0 md:w-[45vh] w-[40vh]  transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "47vh" } : {}}></motion.img>
             <motion.img initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5, delay: 0.050 }} exit={{ scale: 0 }} alt="inner" src="/roadouter.webp" className='md:block hidden z-[9] absolute top-0 right-0 md:w-[75vh] transition-all ease-in-out duration-300 select-none' style={onHover ? { width: "85vh" } : {}}></motion.img>
 
-            <motion.h1 initial={{ opacity: "0%" }} animate={{ x: [-200, 0], opacity: "10%" }} transition={{ duration: 1, delay: 0.1 }} className='md:mt-32 mt-28 md:text-8xl text-6xl font-orbit font-bold text-white z-10 md:pb-20 pb-7'>ABOUT</motion.h1>
+            <motion.h1 initial={{ opacity: "0%" }} animate={{ x: [-200, 0], opacity: "10%" }} transition={{ duration: 1, delay: 0.1 }} className='md:mt-32 mt-28 md:text-8xl text-6xl font-orbit font-bold text-white z-10 md:pb-20 pb-7'>ROADMAP</motion.h1>
 
             <div className='relative h-auto w-fit md:pb-20 z-10'>
                 <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }} className='font-orbit md:text-5xl font-bold text text-2xl' data-text="OUR STEPS">OUR STEPS</motion.h1>
