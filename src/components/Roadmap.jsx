@@ -69,8 +69,14 @@ const Roadmap = ({ prev, home }) => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} className='absolute bottom-5 right-5'>
                 <h2 className='font-orbit text-sm md:text-md'>Contact us through:</h2>
                 <div className='flex w-full justify-end gap-x-4 text-xl mt-3'>
-                    <SiTwitter className='cursor-pointer transition-transform ease-in-out duration-300 hover:scale-[1.1]' />
-                    <FaTelegramPlane className='cursor-pointer transition-transform ease-in-out duration-300 hover:scale-[1.1]' />
+                    <a href="https://twitter.com/FlokiInvasion" target="_blank" rel='noreferrer'>
+                        <SiTwitter className='cursor-pointer transition-transform ease-in-out duration-300 hover:scale-[1.1]' />
+
+                    </a>
+
+                    <a href="https://t.me/flokiinvasionportal" target="_blank" rel='noreferrer'>
+                        <FaTelegramPlane className='cursor-pointer transition-transform ease-in-out duration-300 hover:scale-[1.1]' />
+                    </a>
                 </div>
 
             </motion.div>
