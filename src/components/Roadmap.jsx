@@ -46,12 +46,15 @@ const Roadmap = ({ prev, home }) => {
 
                 <div className='ml-2 md:mt-9 lg:max-w-[30rem] max-w-[18rem] md:max-w-[20rem] 2xl:max-w-[35rem]'>
                     <Slider {...settings} className="w-full">
-                        <Phase phase="Phase 1" desc={<>-Floki Invasion<br /> -Branding Created
-                            -Website & Whitepaper Live<br />
+                        <Phase phase="Phase 1" desc={<>
+                            -Floki Invasion<br />
+                            -Receive from Floki Deployer Mothership<br />
+                            -Branding Created - Website & Whitepaper Live<br />
                             -Stealth Launch<br />
                             -Social Channels Live<br />
-                            -Community Growth and Competitions<br />
-                            -Vaporize Bot Active</>} />
+                            -Community Growth And Competitions<br />
+                            -Vaporize Bot Active
+                        </>} />
 
                         <Phase phase="Phase 2" desc={<>-Social Media Marketing<br />
                             -Influencer Partnerships & AMAs<br />
